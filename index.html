@@ -395,6 +395,40 @@
     .dark-band .m-bracket .letters { background:#211915; }
 
     @media (max-width: 780px) { header { grid-template-columns:1fr; } }
+
+    /* Global highlight cleanup: no small pill/specular glints */
+    .m-pearl::after,
+    .m-glass::after,
+    .m-lacquer::before,
+    .m-lacquer::after {
+      display: none !important;
+      content: none !important;
+      background: none !important;
+      box-shadow: none !important;
+    }
+    .m-glass::before {
+      background: radial-gradient(circle at 44% 30%, rgba(255,255,255,.18), rgba(255,247,219,.10) 38%, transparent 72%) !important;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), inset 0 8px 18px rgba(255,255,255,.10), inset 0 -10px 22px rgba(0,0,0,.18) !important;
+    }
+    .m-lacquer {
+      box-shadow: 0 26px 50px rgba(33,27,23,.36), inset 0 8px 18px rgba(255,255,255,.16), inset 0 -12px 22px rgba(0,0,0,.36) !important;
+    }
+    .m-enamel::before {
+      background-position: center center !important;
+      box-shadow: inset 0 1px 2px rgba(255,255,255,.16), inset 0 -3px 6px rgba(0,0,0,.34) !important;
+    }
+    body.color-study .m-glass::before {
+      background: radial-gradient(circle at 48% 34%, rgba(255,255,255,.18), rgba(159,200,220,.20) 44%, rgba(217,130,50,.12) 78%, transparent 100%) !important;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), inset 0 8px 18px rgba(159,200,220,.10), inset 0 -12px 22px rgba(18,54,90,.22) !important;
+    }
+    body.color-study .m-enamel {
+      background: radial-gradient(circle at 50% 50%, #d9edf5 0%, #9fc8dc 38%, #12365a 70%, #d98232 100%) !important;
+    }
+    body.color-study .m-enamel::before {
+      background: radial-gradient(circle at 50% 52%, #d9edf5 0%, #9fc8dc 44%, #f29a45 100%) !important;
+      border: 1px solid rgba(18,54,90,.26) !important;
+    }
+
   </style>
 </head>
 <body>
@@ -424,11 +458,11 @@
     <section class="card rose"><div class="stage"><span class="mark m-cameo"><span class="letters">L&amp;L</span></span></div><div><h2>Raised Cameo</h2><small>Onyx oval inlaid in champagne — second-skin luxury label.</small></div></section>
     <section class="card"><div class="stage"><span class="mark m-relief"><span class="letters">LL</span></span></div><div><h2>Relief Plaque</h2><small>Raised metallic tile with debossed core. Strong favicon weight.</small></div></section>
     <section class="card dark"><div class="stage"><span class="mark m-foil"><span class="letters">LL</span></span></div><div><h2>Champagne Foil</h2><small>Square foil stamp with debossed core — packaging-grade gravitas.</small></div></section>
-    <section class="card rose"><div class="stage"><span class="mark m-lacquer"><span class="letters">LL</span></span></div><div><h2>Lacquer Dome</h2><small>Glossy enamel sphere with sculpted highlight — nail-bar signature.</small></div></section>
+    <section class="card rose"><div class="stage"><span class="mark m-lacquer"><span class="letters">LL</span></span></div><div><h2>Lacquer Dome</h2><small>Glossy enamel sphere with smoother color depth — nail-bar signature.</small></div></section>
     <section class="card"><div class="stage"><span class="mark m-enamel"><span class="letters">LL</span></span></div><div><h2>Enamel Pin</h2><small>Champagne rim around blush enamel — boutique pin energy.</small></div></section>
     <section class="card"><div class="stage"><span class="mark m-press"><span class="letters">L&amp;L</span></span></div><div><h2>Letterpress Plate</h2><small>Soft debossed cardstock plaque — stationery atelier mark.</small></div></section>
     <section class="card sage"><div class="stage"><span class="mark m-ring"><span class="letters">LL</span></span></div><div><h2>Champagne Ring</h2><small>Heavy raised metal collar around a polished disc — signet weight.</small></div></section>
-    <section class="card"><div class="stage"><span class="mark m-glass"><span class="letters">LL</span></span></div><div><h2>Glass Cabochon</h2><small>Clear lens dome over warm champagne — patisserie glaze.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-glass"><span class="letters">LL</span></span></div><div><h2>Glass Cabochon</h2><small>Glass-like dome with smooth depth — patisserie glaze.</small></div></section>
     <section class="card dark"><div class="stage"><span class="mark m-tablet"><span class="letters">LL</span></span></div><div><h2>Onyx Tablet</h2><small>Polished stone slab with inset core — apothecary-luxe identity.</small></div></section>
     <section class="card"><div class="stage"><span class="mark m-marble"><span class="letters">LL</span></span></div><div><h2>Marbled Disc</h2><small>Veined cream marble with hand-rubbed sheen — spa front-of-house.</small></div></section>
   </main>

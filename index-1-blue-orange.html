@@ -3,22 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Premium CSS Monogram Logo Library — One Letter</title>
+  <title>Premium CSS Monogram Logo Library — One Letter · Blue Orange Study</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #211b17;
-      --espresso: #2d221d;
-      --ivory: #fbf7ef;
-      --paper: #f3eadc;
-      --champagne: #c8ad72;
-      --old-gold: #9b7b44;
-      --taupe: #908174;
-      --rose: #b8877b;
-      --sage: #8f947c;
-      --shadow: rgba(33, 27, 23, .15);
+      --ink: #142033;
+      --espresso: #0d1728;
+      --ivory: #fbf4e8;
+      --paper: #eaf2f7;
+      --champagne: #d98232;
+      --old-gold: #a95722;
+      --taupe: #687f93;
+      --rose: #c76f3b;
+      --sage: #6f93a7;
+      --shadow: rgba(13, 23, 40, .18);
+      --porcelain-blue: #d9edf5;
+      --powder-blue: #9fc8dc;
+      --deep-blue: #12365a;
+      --copper: #cc6e2c;
     }
     * { box-sizing: border-box; }
     body {
@@ -27,9 +31,10 @@
       font-family: 'DM Sans', sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at 16% 10%, rgba(200,173,114,.22), transparent 26%),
-        radial-gradient(circle at 86% 4%, rgba(184,135,123,.16), transparent 28%),
-        linear-gradient(135deg, #fffaf2, #ede2d2 64%, #e5d7c5);
+        radial-gradient(circle at 14% 8%, rgba(83, 151, 188, .26), transparent 28%),
+        radial-gradient(circle at 88% 6%, rgba(217, 130, 50, .22), transparent 30%),
+        radial-gradient(circle at 52% 88%, rgba(18, 54, 90, .10), transparent 34%),
+        linear-gradient(135deg, #fff7ea, #e7f1f6 58%, #d6e5ee);
       padding: 54px 28px 70px;
     }
     header { max-width: 1180px; margin: 0 auto 34px; display:grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items:end; }
@@ -389,6 +394,298 @@
     .dark-band .m-bracket .letters { background:#211915; }
 
     @media (max-width: 780px) { header { grid-template-columns:1fr; } }
+  
+
+    /* Blue / orange color study overrides */
+    body.color-study .brief {
+      background: rgba(255, 249, 238, .58);
+      border-color: rgba(18, 54, 90, .12);
+      box-shadow: 0 18px 54px rgba(18, 54, 90, .08);
+    }
+    body.color-study .card {
+      background: linear-gradient(145deg, rgba(255, 251, 243, .76), rgba(231, 242, 247, .72));
+      border-color: rgba(18, 54, 90, .10);
+      box-shadow: 0 24px 72px rgba(18, 54, 90, .11);
+    }
+    body.color-study .card.rose {
+      background: linear-gradient(145deg, #fff2e3, #e7f2f8 68%, #f3c08f);
+    }
+    body.color-study .card.sage {
+      background: linear-gradient(145deg, #eef7fb, #d7e9f1 62%, #f2d5b7);
+    }
+    body.color-study .card.dark {
+      background: linear-gradient(145deg, #12365a, #0d1728 68%, #1c2332);
+    }
+    body.color-study .card::after {
+      background: radial-gradient(circle, rgba(217, 130, 50, .16), transparent 67%);
+    }
+    body.color-study .m-seal::after,
+    body.color-study .m-oval::after,
+    body.color-study .m-bracket i,
+    body.color-study .m-stack::after,
+    body.color-study .m-diamond::after {
+      border-color: rgba(217, 130, 50, .76);
+      background-color: transparent;
+    }
+    body.color-study .m-medallion,
+    body.color-study .m-ring {
+      background: radial-gradient(circle at 32% 24%, #fff2cf 0%, #e89842 31%, #a95722 70%, #4a2510 100%);
+    }
+    body.color-study .m-pearl,
+    body.color-study .m-glass {
+      background: radial-gradient(circle at 34% 24%, #ffffff 0%, #d9edf5 22%, #9fc8dc 52%, #12365a 100%);
+    }
+    body.color-study .m-coin,
+    body.color-study .m-tablet {
+      background: linear-gradient(145deg, #12365a, #07111f);
+    }
+    body.color-study .m-lacquer {
+      background: radial-gradient(circle at 34% 24%, #ffe0be 0%, #d98232 34%, #9d4318 72%, #351306 100%);
+    }
+    body.color-study .m-enamel {
+      background: radial-gradient(circle at 38% 28%, #e8f7ff 0%, #95c8df 42%, #12365a 100%);
+    }
+    body.color-study .m-foil,
+    body.color-study .m-relief {
+      background: linear-gradient(145deg, #e79a4a, #a95722 55%, #58250d);
+    }
+    body.color-study .m-cameo {
+      background: linear-gradient(145deg, #f4a65b, #a95722);
+    }
+    body.color-study .m-marble {
+      background:
+        radial-gradient(circle at 25% 18%, rgba(255,255,255,.82), transparent 28%),
+        linear-gradient(125deg, transparent 0 28%, rgba(217,130,50,.26) 29% 31%, transparent 32% 52%, rgba(18,54,90,.18) 53% 55%, transparent 56%),
+        linear-gradient(145deg, #f8f6ed, #d9edf5 55%, #f0c093);
+    }
+    body.color-study .dark-band {
+      background: linear-gradient(145deg,#12365a,#07111f 72%, #2b170b);
+    }
+
+
+    /* Second pass: every mark carries BOTH blue + orange in the logo itself */
+    body.color-study .letters {
+      color: #102847;
+      text-shadow: 0 1px 0 rgba(255,244,226,.72), 0 -1px 1px rgba(13,23,40,.22);
+    }
+    body.color-study .card.dark .letters,
+    body.color-study .dark-band .letters {
+      color: #ffe2b8;
+      text-shadow: 0 -1px 1px rgba(0,0,0,.66), 0 1px 0 rgba(130,190,220,.18);
+    }
+    body.color-study .m-seal::before,
+    body.color-study .m-oval::before,
+    body.color-study .m-stack::before,
+    body.color-study .m-diamond::before {
+      border-color: rgba(18,54,90,.74);
+      box-shadow: 0 18px 40px rgba(18,54,90,.13), inset 0 0 0 7px rgba(159,200,220,.12);
+    }
+    body.color-study .m-seal::after,
+    body.color-study .m-oval::after,
+    body.color-study .m-stack::after,
+    body.color-study .m-diamond::after {
+      border-color: rgba(217,130,50,.82);
+      background: radial-gradient(circle at 38% 28%, rgba(217,130,50,.16), rgba(159,200,220,.12) 52%, transparent 72%);
+    }
+    body.color-study .m-bracket::before { border-color: rgba(18,54,90,.82); }
+    body.color-study .m-bracket::after { border-color: rgba(217,130,50,.86); }
+    body.color-study .m-bracket i {
+      background: linear-gradient(90deg, rgba(18,54,90,.78), rgba(217,130,50,.86));
+      height: 2px;
+    }
+    body.color-study .m-bracket .letters { color:#102847; background:#fff5e7; }
+    body.color-study .card.dark .m-bracket .letters,
+    body.color-study .dark-band .m-bracket .letters { background:#102847; color:#ffe2b8; }
+
+    body.color-study .m-medallion,
+    body.color-study .m-ring {
+      background: radial-gradient(circle at 30% 22%, #fff3d6 0%, #e88938 24%, #b75f22 52%, #12365a 100%);
+      box-shadow: 0 24px 48px rgba(18,54,90,.25), inset 0 2px 4px rgba(255,244,226,.75), inset 0 -5px 8px rgba(13,23,40,.42);
+    }
+    body.color-study .m-medallion::before,
+    body.color-study .m-ring::before {
+      background: linear-gradient(145deg, #12365a 0%, #0d1728 70%, #06101f 100%);
+      box-shadow: inset 0 2px 5px rgba(0,0,0,.62), inset 0 -1px 2px rgba(159,200,220,.28);
+    }
+    body.color-study .m-medallion::after,
+    body.color-study .m-ring::after {
+      background: radial-gradient(circle at 35% 25%, #d9edf5 0%, #9fc8dc 35%, #f09a45 100%);
+      border: 1px solid rgba(255,239,210,.42);
+    }
+
+    body.color-study .m-pearl,
+    body.color-study .m-glass {
+      background: radial-gradient(circle at 34% 24%, #ffffff 0%, #d9edf5 22%, #9fc8dc 48%, #d98232 76%, #12365a 100%);
+    }
+    body.color-study .m-pearl::before,
+    body.color-study .m-glass::before {
+      background: radial-gradient(circle at 40% 30%, rgba(255,255,255,.72), rgba(159,200,220,.32) 44%, rgba(217,130,50,.22) 80%);
+      border-color: rgba(217,130,50,.52);
+    }
+    body.color-study .m-pearl::after,
+    body.color-study .m-glass::after {
+      background: radial-gradient(ellipse at center, rgba(255,255,255,.82), rgba(159,200,220,.28), transparent 76%);
+    }
+
+    body.color-study .m-tile,
+    body.color-study .m-press,
+    body.color-study .m-marble {
+      background: linear-gradient(145deg, #fff7e8 0%, #d9edf5 45%, #f1b16d 100%);
+      box-shadow: 0 22px 44px rgba(18,54,90,.16), inset 0 2px 3px rgba(255,255,255,.7), inset 0 -3px 5px rgba(217,130,50,.18);
+    }
+    body.color-study .m-tile::after,
+    body.color-study .m-press::after,
+    body.color-study .m-marble::after {
+      border-color: rgba(18,54,90,.36);
+      box-shadow: inset 0 0 0 1px rgba(217,130,50,.34);
+    }
+
+    body.color-study .m-coin,
+    body.color-study .m-stamp,
+    body.color-study .m-tablet {
+      background: radial-gradient(circle at 30% 20%, #1d5b87 0%, #12365a 35%, #0d1728 68%, #2b1508 100%);
+      box-shadow: 0 24px 48px rgba(13,23,40,.34), inset 0 2px 3px rgba(159,200,220,.22), inset 0 -4px 7px rgba(0,0,0,.54);
+    }
+    body.color-study .m-coin::before,
+    body.color-study .m-stamp::before,
+    body.color-study .m-tablet::before {
+      border-color: rgba(217,130,50,.72);
+      background: radial-gradient(circle at 34% 24%, rgba(217,130,50,.18), transparent 62%);
+    }
+    body.color-study .m-coin::after,
+    body.color-study .m-stamp::after,
+    body.color-study .m-tablet::after {
+      border-color: rgba(159,200,220,.28);
+      background: radial-gradient(circle at 34% 24%, rgba(159,200,220,.18), transparent 56%);
+    }
+
+    body.color-study .m-cameo,
+    body.color-study .m-relief,
+    body.color-study .m-foil {
+      background: linear-gradient(145deg, #ef9f4f 0%, #c46625 44%, #12365a 100%);
+      box-shadow: 0 24px 46px rgba(18,54,90,.24), inset 0 2px 3px rgba(255,245,225,.62), inset 0 -4px 7px rgba(13,23,40,.42);
+    }
+    body.color-study .m-cameo::before,
+    body.color-study .m-relief::before,
+    body.color-study .m-foil::before {
+      background: linear-gradient(145deg, #d9edf5 0%, #12365a 62%, #07111f 100%);
+      box-shadow: inset 0 2px 5px rgba(0,0,0,.58), inset 0 -1px 2px rgba(159,200,220,.28);
+    }
+    body.color-study .m-cameo .letters,
+    body.color-study .m-relief .letters,
+    body.color-study .m-foil .letters { color: #ffe2b8; }
+
+    body.color-study .m-lacquer {
+      background: radial-gradient(circle at 34% 24%, #ffe6c9 0%, #d98232 30%, #12365a 72%, #07111f 100%);
+      box-shadow: 0 24px 48px rgba(18,54,90,.26), inset 0 3px 5px rgba(255,242,226,.62), inset 0 -4px 7px rgba(0,0,0,.42);
+    }
+    body.color-study .m-lacquer::before {
+      background: radial-gradient(circle at 36% 25%, rgba(255,255,255,.62), rgba(159,200,220,.24) 38%, rgba(217,130,50,.16) 66%, transparent 78%);
+    }
+
+    body.color-study .m-enamel {
+      background: radial-gradient(circle at 34% 24%, #fff2d8 0%, #e28b3a 24%, #12365a 76%, #07111f 100%);
+    }
+    body.color-study .m-enamel::before {
+      background: radial-gradient(circle at 40% 30%, #d9edf5 0%, #9fc8dc 44%, #f29a45 100%);
+      border: 1px solid rgba(255,242,226,.38);
+    }
+    body.color-study .m-enamel::after {
+      border-color: rgba(18,54,90,.32);
+      box-shadow: inset 0 0 0 1px rgba(217,130,50,.28);
+    }
+
+
+    /* Third pass: make blue/orange visibly obvious even on line and dark marks */
+    body.color-study .m-seal,
+    body.color-study .m-oval,
+    body.color-study .m-stack,
+    body.color-study .m-diamond,
+    body.color-study .m-bracket {
+      background: radial-gradient(circle at 34% 24%, rgba(217,130,50,.18) 0%, rgba(159,200,220,.18) 46%, rgba(18,54,90,.05) 100%);
+    }
+    body.color-study .m-seal .letters,
+    body.color-study .m-oval .letters,
+    body.color-study .m-stack .letters,
+    body.color-study .m-diamond .letters,
+    body.color-study .m-bracket .letters {
+      color: #12365a;
+      text-shadow: 1px 1px 0 rgba(217,130,50,.28), 0 1px 0 rgba(255,246,232,.78);
+    }
+    body.color-study .m-coin,
+    body.color-study .m-stamp,
+    body.color-study .m-tablet {
+      background: radial-gradient(circle at 30% 20%, #1d5b87 0%, #12365a 32%, #0d1728 58%, #d98232 100%);
+    }
+    body.color-study .m-coin .letters,
+    body.color-study .m-stamp .letters,
+    body.color-study .m-tablet .letters {
+      color: #ffe2b8;
+      text-shadow: 1px 1px 0 rgba(217,130,50,.38), 0 -1px 1px rgba(0,0,0,.72);
+    }
+    body.color-study .m-tile .letters,
+    body.color-study .m-press .letters,
+    body.color-study .m-marble .letters,
+    body.color-study .m-pearl .letters,
+    body.color-study .m-glass .letters,
+    body.color-study .m-enamel .letters {
+      color: #12365a;
+      text-shadow: 1px 1px 0 rgba(217,130,50,.30), 0 1px 0 rgba(255,255,255,.72);
+    }
+
+
+    /* Remove awkward small specular highlight pills from glass/lacquer marks */
+    body.color-study .m-glass::after,
+    body.color-study .m-lacquer::before,
+    body.color-study .m-lacquer::after {
+      display: none;
+      content: none;
+    }
+    body.color-study .m-glass::before {
+      background: radial-gradient(circle at 42% 28%, rgba(255,255,255,.26), rgba(159,200,220,.22) 42%, rgba(217,130,50,.14) 76%, transparent 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.20), inset 0 8px 18px rgba(255,255,255,.12), inset 0 -10px 22px rgba(18,54,90,.20);
+    }
+    body.color-study .m-lacquer {
+      box-shadow: 0 24px 48px rgba(18,54,90,.26), inset 0 8px 18px rgba(255,242,226,.22), inset 0 -12px 22px rgba(0,0,0,.34);
+    }
+
+
+    /* Make Ivory Tile + Embossed Seal clearly blue/orange, not cream-only */
+    body.color-study .m-tile {
+      background: linear-gradient(145deg, #e4f5fb 0%, #9fc8dc 42%, #fff1df 72%, #f0a25a 100%);
+      box-shadow: 0 22px 44px rgba(18,54,90,.18), inset 0 2px 3px rgba(255,255,255,.72), inset 0 -5px 10px rgba(18,54,90,.14);
+    }
+    body.color-study .m-tile::before {
+      background: linear-gradient(145deg, #fff4e6 0%, #d9edf5 54%, #f3b070 100%);
+      box-shadow: inset 0 2px 4px rgba(18,54,90,.16), inset 0 -1px 2px rgba(217,130,50,.24);
+    }
+    body.color-study .m-tile::after {
+      border-color: rgba(18,54,90,.55);
+      box-shadow: inset 0 0 0 1px rgba(217,130,50,.42), 0 0 0 1px rgba(159,200,220,.22);
+    }
+    body.color-study .m-tile .letters {
+      color: #12365a;
+      text-shadow: 1px 1px 0 rgba(217,130,50,.34), 0 1px 0 rgba(255,255,255,.78);
+    }
+
+    body.color-study .m-emboss {
+      background: radial-gradient(circle at 35% 26%, #fef6e8 0%, #d9edf5 34%, #9fc8dc 62%, #f0a25a 100%);
+      box-shadow: 0 22px 44px rgba(18,54,90,.18), inset 0 2px 5px rgba(255,255,255,.70), inset 0 -7px 14px rgba(18,54,90,.16);
+    }
+    body.color-study .m-emboss::before {
+      border-color: rgba(18,54,90,.42);
+      background: radial-gradient(circle at 40% 30%, #fff6e8 0%, #d9edf5 52%, rgba(217,130,50,.18) 100%);
+      box-shadow: inset 0 3px 6px rgba(18,54,90,.12), inset 0 -2px 4px rgba(217,130,50,.18);
+    }
+    body.color-study .m-emboss::after {
+      border-color: rgba(217,130,50,.62);
+      box-shadow: 0 0 0 1px rgba(159,200,220,.22);
+    }
+    body.color-study .m-emboss .letters {
+      color: #12365a;
+      text-shadow: 1px 1px 0 rgba(217,130,50,.30), 0 1px 0 rgba(255,255,255,.70);
+    }
+
 
     /* Global highlight cleanup: no small pill/specular glints */
     .m-pearl::after,
@@ -425,12 +722,12 @@
 
   </style>
 </head>
-<body>
+<body class="color-study">
   <header>
     <div>
       <div class="eyebrow">Premium CSS Monogram Library · One Letter</div>
-      <h1>Single-letter marks, made monumental.</h1>
-      <p>One-letter edition of the premium CSS monogram library. Every mark is built around a single capital — sized larger, centered with intention, and tuned for solo presence. Pull from this set for boutique salons, ateliers, patisseries, and any local brand that wants a confident single-letter identity.</p>
+      <h1>Single-letter marks with blue/orange depth.</h1>
+      <p>Color-study edition of the one-letter premium CSS monogram library. The same single-letter mark system is retuned with deep navy, porcelain blue, burnt orange, copper, and warm cream to test how a stronger color scheme changes the identity feel.</p>
     </div>
     <aside class="brief">
       <p><strong>Filter:</strong> usable at 48–72px, no diagonal anti-sign, no toy shapes, no trademark copies, no novelty animation. Single-letter sample: <strong>L</strong>. Swap freely.</p>
@@ -456,7 +753,7 @@
     <section class="card"><div class="stage"><span class="mark m-enamel"><span class="letters">L</span></span></div><div><h2>Enamel Pin</h2><small>Champagne rim around blush enamel — boutique pin energy.</small></div></section>
     <section class="card"><div class="stage"><span class="mark m-press"><span class="letters">L</span></span></div><div><h2>Letterpress Plate</h2><small>Soft debossed cardstock plaque — stationery atelier mark.</small></div></section>
     <section class="card sage"><div class="stage"><span class="mark m-ring"><span class="letters">L</span></span></div><div><h2>Champagne Ring</h2><small>Heavy raised metal collar around a polished disc — signet weight.</small></div></section>
-    <section class="card"><div class="stage"><span class="mark m-glass"><span class="letters">L</span></span></div><div><h2>Glass Cabochon</h2><small>Glass-like dome with smooth depth — patisserie glaze.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-glass"><span class="letters">L</span></span></div><div><h2>Glass Cabochon</h2><small>Glass-like dome with smooth blue/orange depth — patisserie glaze.</small></div></section>
     <section class="card dark"><div class="stage"><span class="mark m-tablet"><span class="letters">L</span></span></div><div><h2>Onyx Tablet</h2><small>Polished stone slab with inset core — apothecary-luxe identity.</small></div></section>
     <section class="card"><div class="stage"><span class="mark m-marble"><span class="letters">L</span></span></div><div><h2>Marbled Disc</h2><small>Veined cream marble with hand-rubbed sheen — spa front-of-house.</small></div></section>
   </main>
