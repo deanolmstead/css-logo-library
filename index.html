@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premium CSS Monogram Logo Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #211b17;
+      --espresso: #2d221d;
+      --ivory: #fbf7ef;
+      --paper: #f3eadc;
+      --champagne: #c8ad72;
+      --old-gold: #9b7b44;
+      --taupe: #908174;
+      --rose: #b8877b;
+      --sage: #8f947c;
+      --shadow: rgba(33, 27, 23, .15);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 16% 10%, rgba(200,173,114,.22), transparent 26%),
+        radial-gradient(circle at 86% 4%, rgba(184,135,123,.16), transparent 28%),
+        linear-gradient(135deg, #fffaf2, #ede2d2 64%, #e5d7c5);
+      padding: 54px 28px 70px;
+    }
+    header { max-width: 1180px; margin: 0 auto 34px; display:grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items:end; }
+    .eyebrow { letter-spacing: .22em; font-size: 11px; color: var(--taupe); text-transform: uppercase; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 7vw, 86px); font-weight: 400; line-height: .9; margin: 10px 0 12px; }
+    p { max-width: 760px; line-height: 1.65; color: #65584e; margin:0; }
+    .brief { padding: 20px 22px; border: 1px solid rgba(33,27,23,.08); border-radius: 24px; background: rgba(255,255,255,.42); box-shadow: 0 18px 50px rgba(33,27,23,.06); }
+    .brief strong { color: var(--ink); }
+    .grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 18px; }
+    .card {
+      min-height: 288px;
+      padding: 28px;
+      border: 1px solid rgba(33,27,23,.08);
+      border-radius: 30px;
+      background: rgba(255,255,255,.56);
+      box-shadow: 0 24px 70px rgba(33,27,23,.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow:hidden;
+      position:relative;
+    }
+    .card.dark { background: linear-gradient(145deg, #30241f, #191411); color: var(--ivory); }
+    .card.rose { background: linear-gradient(145deg, #fff7f1, #ead4cc); }
+    .card.sage { background: linear-gradient(145deg, #f7f5ed, #dfe0d1); }
+    .card::after { content:""; position:absolute; inset:auto -20% -40% auto; width: 190px; height:190px; border-radius:50%; background:rgba(200,173,114,.11); pointer-events:none; }
+    .stage { height: 142px; display: flex; align-items: center; justify-content: center; color: currentColor; }
+    .card h2 { margin: 18px 0 4px; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px; }
+    .card small { color: var(--taupe); line-height: 1.5; position:relative; z-index:1; }
+    .card.dark small { color: rgba(251,247,239,.68); }
+    .card h2, .card small, .stage { position:relative; z-index:1; }
+
+    .mark { position: relative; display:inline-grid; place-items:center; color: currentColor; isolation:isolate; }
+    .mark::before, .mark::after, .mark i, .mark b { content:""; position:absolute; display:block; pointer-events:none; }
+    .letters { position:relative; z-index:2; font-family:'Cormorant Garamond', serif; line-height:1; color:currentColor; }
+    .amp { font-style:italic; color:var(--champagne); }
+
+    /* 1 — Keeper: fine double-ring seal */
+    .m-seal { width:66px; height:66px; border-radius:50%; }
+    .m-seal::before { inset:0; border:1px solid currentColor; border-radius:inherit; opacity:.72; box-shadow:inset 0 0 0 7px rgba(200,173,114,.10), 0 18px 44px var(--shadow); }
+    .m-seal::after { inset:9px; border:1px solid rgba(200,173,114,.72); border-radius:inherit; background:radial-gradient(circle at 50% 35%, rgba(255,255,255,.30), transparent 58%); }
+    .m-seal .letters { width:36px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; justify-items:center; }
+    .m-seal .letters span:not(.amp) { font-size:18px; transform:scaleX(.82); }
+    .m-seal .amp { font-size:8px; transform:translateY(-1px); }
+
+    /* 2 — Atelier oval stamp */
+    .m-oval { width:86px; height:54px; border-radius:999px; }
+    .m-oval::before { inset:0; border:1px solid rgba(33,27,23,.72); border-radius:inherit; box-shadow:0 18px 38px rgba(33,27,23,.09); }
+    .m-oval::after { inset:7px 11px; border:1px solid rgba(200,173,114,.72); border-radius:inherit; background:linear-gradient(90deg, transparent, rgba(255,255,255,.24), transparent); }
+    .m-oval .letters { font-size:17px; letter-spacing:.16em; transform:translateX(.08em); }
+
+    /* 3 — Editorial bracket monogram */
+    .m-bracket { width:88px; height:52px; }
+    .m-bracket::before, .m-bracket::after { top:0; bottom:0; width:16px; border-top:1px solid currentColor; border-bottom:1px solid currentColor; opacity:.78; }
+    .m-bracket::before { left:0; border-left:1px solid currentColor; }
+    .m-bracket::after { right:0; border-right:1px solid currentColor; }
+    .m-bracket i { width:36px; height:1px; background:var(--champagne); top:50%; left:50%; transform:translate(-50%,-50%); opacity:.65; }
+    .m-bracket .letters { font-size:18px; letter-spacing:.20em; transform:translateX(.10em); background:var(--ivory); padding:0 7px; }
+    .dark .m-bracket .letters { background:#211915; }
+
+    /* 4 — Beveled Gold Medallion (3D) */
+    .m-medallion { width:72px; height:72px; border-radius:50%;
+      background:linear-gradient(145deg,#f3dca1 0%,#caa05a 38%,#8b6929 72%,#5b4118 100%);
+      box-shadow:
+        0 22px 44px rgba(33,27,23,.34),
+        0 2px 0 rgba(255,255,255,.35),
+        inset 0 2px 3px rgba(255,247,219,.75),
+        inset 0 -3px 5px rgba(0,0,0,.45);
+    }
+    .m-medallion::before { inset:7px; border-radius:50%;
+      background:linear-gradient(145deg,#a37c3a,#5a4118 70%,#2c1f0d);
+      box-shadow:inset 0 2px 4px rgba(0,0,0,.55), inset 0 -1px 2px rgba(255,224,164,.30);
+    }
+    .m-medallion::after { inset:13px; border-radius:50%;
+      background:linear-gradient(145deg,#e8c277,#9c7836 60%,#6b4d1f);
+      box-shadow:inset 0 1px 2px rgba(255,247,219,.55), inset 0 -2px 3px rgba(0,0,0,.40);
+    }
+    .m-medallion .letters { color:#2b1d0c; font-size:18px; letter-spacing:.10em; transform:translateX(.05em);
+      text-shadow:0 1px 0 rgba(255,237,196,.55), 0 -1px 1px rgba(0,0,0,.35);
+    }
+
+    /* 5 — Onyx Cabochon (raised pearl) */
+    .m-pearl { width:74px; height:74px; border-radius:50%;
+      background:radial-gradient(circle at 32% 26%,#fdf6e6 0%,#e6cf99 22%,#a8823c 58%,#5a3e15 90%);
+      box-shadow:
+        0 24px 46px rgba(33,27,23,.38),
+        inset 0 -3px 6px rgba(0,0,0,.30),
+        inset 0 2px 4px rgba(255,247,219,.55);
+    }
+    .m-pearl::before { inset:11px; border-radius:50%;
+      background:radial-gradient(circle at 50% 60%,#3a2a1d 0%,#150d08 80%);
+      box-shadow:inset 0 3px 5px rgba(0,0,0,.7), inset 0 -1px 1px rgba(200,173,114,.18), 0 1px 0 rgba(255,237,196,.40);
+    }
+    .m-pearl::after { inset:14px 22px auto 22px; height:6px; border-radius:50%;
+      background:radial-gradient(ellipse at center, rgba(255,247,219,.45), transparent 70%);
+    }
+    .m-pearl .letters { color:#e8c277; font-size:18px; letter-spacing:.10em; transform:translateX(.05em);
+      text-shadow:0 -1px 1px rgba(0,0,0,.7), 0 1px 0 rgba(200,173,114,.20);
+    }
+
+    /* 7 — Wordmark tile */
+    .m-tile { width:72px; height:72px; border-radius:18px; }
+    .m-tile::before { inset:0; border-radius:inherit; background:linear-gradient(145deg, #faf4eb, #dfcfba); border:1px solid rgba(33,27,23,.08); box-shadow:0 22px 42px rgba(33,27,23,.12); }
+    .m-tile::after { inset:8px; border-radius:13px; border:1px solid rgba(200,173,114,.64); }
+    .m-tile .letters { font-size:22px; letter-spacing:.03em; }
+
+    /* 8 — Embossed Paper Seal (debossed letters) */
+    .m-emboss { width:74px; height:74px; border-radius:50%;
+      background:linear-gradient(145deg,#fbf3e1,#e3d0ad 65%,#cdb789);
+      box-shadow:
+        0 18px 38px rgba(33,27,23,.20),
+        inset 0 2px 4px rgba(255,255,255,.85),
+        inset 0 -3px 6px rgba(122,93,50,.28);
+    }
+    .m-emboss::before { inset:8px; border-radius:50%;
+      background:linear-gradient(145deg,#efe1c4,#f9f1de);
+      box-shadow:inset 0 2px 3px rgba(122,93,50,.30), inset 0 -1px 2px rgba(255,255,255,.85);
+    }
+    .m-emboss::after { inset:14px; border-radius:50%; border:1px solid rgba(155,123,68,.32);
+      box-shadow:inset 0 1px 1px rgba(122,93,50,.18);
+    }
+    .m-emboss .letters { font-size:19px; letter-spacing:.08em; transform:translateX(.04em); color:#8a6a36;
+      text-shadow:0 1px 0 rgba(255,255,255,.85), 0 -1px 1px rgba(0,0,0,.18);
+    }
+
+    /* 9 — Stacked LL ligature */
+    .m-stack { width:70px; height:70px; border-radius:50%; }
+    .m-stack::before { inset:0; border:1px solid rgba(33,27,23,.58); border-radius:inherit; }
+    .m-stack::after { inset:8px; border:1px solid rgba(200,173,114,.62); border-radius:inherit; }
+    .m-stack .letters { width:28px; height:36px; }
+    .m-stack .letters::before, .m-stack .letters::after { content:""; position:absolute; border-left:2px solid currentColor; border-bottom:2px solid currentColor; width:12px; height:28px; }
+    .m-stack .letters::before { left:3px; top:1px; }
+    .m-stack .letters::after { right:2px; bottom:1px; color:var(--champagne); transform:translateY(2px); }
+
+    /* 10 — Monoline diamond */
+    .m-diamond { width:70px; height:70px; }
+    .m-diamond::before { width:48px; height:48px; border:1px solid rgba(33,27,23,.60); transform:rotate(45deg); border-radius:8px; box-shadow:0 16px 38px rgba(33,27,23,.08); }
+    .m-diamond::after { width:34px; height:34px; border:1px solid rgba(200,173,114,.70); transform:rotate(45deg); border-radius:6px; }
+    .m-diamond .letters { font-size:17px; letter-spacing:.12em; transform:translateX(.06em); }
+
+    /* 11 — Soft wax coin */
+    .m-coin { width:70px; height:70px; border-radius:50%; color:var(--ivory); background:linear-gradient(145deg, #392a23, #1c1512); box-shadow:0 24px 48px rgba(33,27,23,.24); }
+    .m-coin::before { inset:7px; border:1px solid rgba(200,173,114,.62); border-radius:inherit; }
+    .m-coin::after { inset:14px; border:1px solid rgba(255,247,239,.16); border-radius:inherit; background:radial-gradient(circle at 35% 28%, rgba(255,255,255,.15), transparent 54%); }
+    .m-coin .letters { font-size:18px; letter-spacing:.10em; transform:translateX(.05em); }
+
+    /* 12 — Layered Wax Stamp (stacked rings, dimensional) */
+    .m-stamp { width:74px; height:74px; border-radius:50%;
+      background:linear-gradient(145deg,#3a2a1f,#150e09);
+      box-shadow:
+        0 26px 50px rgba(33,27,23,.40),
+        0 3px 0 rgba(155,123,68,.40),
+        inset 0 2px 3px rgba(200,173,114,.45),
+        inset 0 -3px 7px rgba(0,0,0,.55);
+    }
+    .m-stamp::before { inset:6px; border-radius:50%;
+      border:1px solid rgba(200,173,114,.55);
+      box-shadow:inset 0 2px 4px rgba(0,0,0,.6), 0 1px 0 rgba(200,173,114,.20);
+    }
+    .m-stamp::after { inset:13px; border-radius:50%;
+      background:radial-gradient(circle at 38% 30%, rgba(255,247,219,.16), transparent 60%);
+      border:1px solid rgba(200,173,114,.30);
+      box-shadow:inset 0 -1px 2px rgba(0,0,0,.4);
+    }
+    .m-stamp .letters { color:#d6b97a; font-size:18px; letter-spacing:.12em; transform:translateX(.06em);
+      text-shadow:0 -1px 1px rgba(0,0,0,.85), 0 1px 0 rgba(200,173,114,.25);
+    }
+
+    /* 13 — Raised Cameo Oval (dimensional onyx) */
+    .m-cameo { width:92px; height:60px; border-radius:999px;
+      background:linear-gradient(145deg,#f7eedc,#d8c19b 70%,#a8884e);
+      box-shadow:
+        0 20px 40px rgba(33,27,23,.22),
+        inset 0 2px 3px rgba(255,255,255,.80),
+        inset 0 -3px 5px rgba(122,93,50,.32);
+    }
+    .m-cameo::before { inset:6px 10px; border-radius:999px;
+      background:linear-gradient(145deg,#2e211a,#15100c);
+      box-shadow:inset 0 2px 4px rgba(0,0,0,.7), inset 0 -1px 1px rgba(200,173,114,.18), 0 1px 0 rgba(255,247,219,.55);
+    }
+    .m-cameo::after { inset:9px 16px auto 16px; height:5px; border-radius:50%;
+      background:linear-gradient(90deg, transparent, rgba(255,247,219,.22), transparent);
+    }
+    .m-cameo .letters { color:#e8c277; font-size:18px; letter-spacing:.14em; transform:translateX(.07em);
+      text-shadow:0 -1px 1px rgba(0,0,0,.7), 0 1px 0 rgba(200,173,114,.20);
+    }
+
+    /* 14 — Relief Tile (raised metallic plaque) */
+    .m-relief { width:74px; height:74px; border-radius:20px;
+      background:linear-gradient(145deg,#f0dfbb,#c19a55 55%,#7a5a26 100%);
+      box-shadow:
+        0 24px 46px rgba(33,27,23,.30),
+        inset 0 2px 3px rgba(255,247,219,.65),
+        inset 0 -3px 6px rgba(0,0,0,.35);
+    }
+    .m-relief::before { inset:7px; border-radius:14px;
+      background:linear-gradient(145deg,#7a5a26,#3a2810);
+      box-shadow:inset 0 2px 4px rgba(0,0,0,.55), inset 0 -1px 2px rgba(255,237,196,.18);
+    }
+    .m-relief::after { inset:9px; border-radius:12px; border:1px solid rgba(232,194,119,.40);
+      pointer-events:none;
+    }
+    .m-relief .letters { color:#f4e2b8; font-size:22px; letter-spacing:.04em;
+      text-shadow:0 -1px 1px rgba(0,0,0,.75), 0 1px 0 rgba(232,194,119,.25);
+    }
+
+    /* 15 — Champagne Foil (square foil stamp) */
+    .m-foil { width:72px; height:72px; border-radius:6px;
+      background:linear-gradient(145deg, #f3dca1 0%, #c8a25a 40%, #8b6929 75%, #5b4118 100%);
+      box-shadow:
+        0 22px 44px rgba(33,27,23,.32),
+        inset 0 2px 3px rgba(255,247,219,.65),
+        inset 0 -3px 5px rgba(0,0,0,.40);
+    }
+    .m-foil::before { inset:5px; border-radius:3px;
+      background:linear-gradient(145deg, #b58d3f, #6f4f1c);
+      box-shadow:inset 0 2px 4px rgba(0,0,0,.55), inset 0 -1px 2px rgba(255,237,196,.30);
+    }
+    .m-foil::after { inset:8px; border-radius:2px; border:1px solid rgba(255,247,219,.42);
+      background:radial-gradient(circle at 35% 28%, rgba(255,247,219,.18), transparent 55%);
+    }
+    .m-foil .letters { color:#f4e2b8; font-size:20px; letter-spacing:.06em;
+      text-shadow:0 -1px 1px rgba(0,0,0,.7), 0 1px 0 rgba(255,237,196,.30);
+    }
+
+    /* 16 — Lacquer Dome (glossy convex enamel) */
+    .m-lacquer { width:72px; height:72px; border-radius:50%;
+      background:radial-gradient(circle at 35% 28%, #ffffff 0%, #f5d7c8 12%, #c97f6c 42%, #7d3a2a 80%, #3f1a12 100%);
+      box-shadow:
+        0 26px 50px rgba(33,27,23,.36),
+        inset 0 -4px 8px rgba(0,0,0,.42),
+        inset 0 3px 4px rgba(255,255,255,.30);
+    }
+    .m-lacquer::before { width:30px; height:14px; top:8px; left:18px; border-radius:50%;
+      background:radial-gradient(ellipse at 50% 50%, rgba(255,255,255,.75), transparent 70%);
+    }
+    .m-lacquer::after { width:8px; height:5px; bottom:14px; right:18px; border-radius:50%;
+      background:radial-gradient(ellipse at center, rgba(255,255,255,.30), transparent 70%);
+    }
+    .m-lacquer .letters { color:#fff5ec; font-size:18px; letter-spacing:.10em; transform:translateX(.05em);
+      text-shadow:0 -1px 2px rgba(0,0,0,.65), 0 1px 0 rgba(255,180,160,.30);
+    }
+
+    /* 17 — Enamel Pin (champagne rim, rose enamel) */
+    .m-enamel { width:72px; height:72px; border-radius:50%;
+      background:linear-gradient(145deg, #efd09a, #a37c3a 60%, #5a3e15);
+      box-shadow:
+        0 22px 44px rgba(33,27,23,.32),
+        inset 0 2px 3px rgba(255,247,219,.55),
+        inset 0 -3px 5px rgba(0,0,0,.40);
+    }
+    .m-enamel::before { inset:6px; border-radius:50%;
+      background:radial-gradient(circle at 38% 30%, #f4e1d4 0%, #d6a78e 30%, #9c5645 70%, #4f261a 100%);
+      box-shadow:inset 0 2px 4px rgba(255,255,255,.28), inset 0 -2px 4px rgba(0,0,0,.40);
+    }
+    .m-enamel::after { inset:9px; border-radius:50%; border:1px solid rgba(255,247,219,.30);
+      background:radial-gradient(circle at 35% 28%, rgba(255,255,255,.20), transparent 55%);
+    }
+    .m-enamel .letters { color:#fff1e6; font-size:18px; letter-spacing:.10em; transform:translateX(.05em);
+      text-shadow:0 -1px 2px rgba(0,0,0,.55), 0 1px 0 rgba(255,200,180,.30);
+    }
+
+    /* 18 — Letterpress Plate (debossed paper plaque) */
+    .m-press { width:88px; height:64px; border-radius:14px;
+      background:linear-gradient(145deg, #fbf3e1, #e3d0ad);
+      box-shadow:
+        0 18px 38px rgba(33,27,23,.18),
+        inset 0 2px 4px rgba(255,255,255,.85),
+        inset 0 -3px 6px rgba(122,93,50,.30);
+    }
+    .m-press::before { inset:6px; border-radius:9px;
+      background:linear-gradient(145deg, #efe1c4, #f9f1de);
+      box-shadow:inset 0 2px 3px rgba(122,93,50,.32), inset 0 -1px 2px rgba(255,255,255,.85);
+    }
+    .m-press::after { inset:9px; border-radius:7px; border:1px solid rgba(155,123,68,.28);
+    }
+    .m-press .letters { font-size:21px; letter-spacing:.06em; color:#8a6a36;
+      text-shadow:0 1px 0 rgba(255,255,255,.85), 0 -1px 1px rgba(0,0,0,.18);
+    }
+
+    /* 20 — Champagne Ring (thick raised metal ring) */
+    .m-ring { width:78px; height:78px; border-radius:50%;
+      background:linear-gradient(145deg, #f3dca1, #b6913e 50%, #6b4d1f);
+      box-shadow:
+        0 24px 48px rgba(33,27,23,.34),
+        inset 0 3px 4px rgba(255,247,219,.65),
+        inset 0 -3px 5px rgba(0,0,0,.42);
+    }
+    .m-ring::before { inset:8px; border-radius:50%;
+      background:linear-gradient(145deg, #ede0c4, #c0a875 60%, #8a724c);
+      box-shadow:inset 0 -2px 4px rgba(0,0,0,.30), inset 0 2px 3px rgba(255,247,219,.65);
+    }
+    .m-ring::after { inset:14px; border-radius:50%;
+      background:radial-gradient(circle at 38% 30%, rgba(255,255,255,.22), transparent 55%);
+      border:1px solid rgba(155,123,68,.40);
+    }
+    .m-ring .letters { color:#3a2812; font-size:18px; letter-spacing:.08em; transform:translateX(.04em);
+      text-shadow:0 1px 0 rgba(255,247,219,.65), 0 -1px 1px rgba(0,0,0,.30);
+    }
+
+    /* 21 — Glass Cabochon (clear dome over champagne) */
+    .m-glass { width:74px; height:74px; border-radius:50%;
+      background:radial-gradient(circle at 50% 65%, #d8b173 0%, #9c7836 60%, #4d3514 100%);
+      box-shadow:
+        0 24px 48px rgba(33,27,23,.34),
+        inset 0 -3px 6px rgba(0,0,0,.40),
+        inset 0 2px 4px rgba(255,247,219,.40);
+    }
+    .m-glass::before { inset:0; border-radius:50%;
+      background:
+        radial-gradient(ellipse at 35% 25%, rgba(255,255,255,.55) 0%, transparent 38%),
+        radial-gradient(ellipse at 65% 80%, rgba(255,247,219,.20) 0%, transparent 42%);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);
+    }
+    .m-glass::after { width:24px; height:12px; top:9px; left:18px; border-radius:50%;
+      background:radial-gradient(ellipse at 50% 50%, rgba(255,255,255,.85), transparent 75%);
+    }
+    .m-glass .letters { color:#2b1d0c; font-size:18px; letter-spacing:.10em; transform:translateX(.05em);
+      text-shadow:0 1px 0 rgba(255,237,196,.55), 0 -1px 1px rgba(0,0,0,.40);
+    }
+
+    /* 22 — Onyx Tablet (dimensional dark stone) */
+    .m-tablet { width:72px; height:72px; border-radius:18px;
+      background:linear-gradient(145deg, #3a2a23, #15110f);
+      box-shadow:
+        0 26px 50px rgba(33,27,23,.40),
+        inset 0 2px 3px rgba(200,173,114,.32),
+        inset 0 -3px 6px rgba(0,0,0,.65);
+    }
+    .m-tablet::before { inset:5px; border-radius:14px;
+      background:linear-gradient(145deg, #2a1f1a, #0e0a08);
+      box-shadow:inset 0 2px 4px rgba(0,0,0,.7), inset 0 -1px 2px rgba(200,173,114,.18);
+    }
+    .m-tablet::after { inset:8px; border-radius:11px; border:1px solid rgba(200,173,114,.30);
+      background:radial-gradient(circle at 35% 25%, rgba(255,247,219,.10), transparent 55%);
+    }
+    .m-tablet .letters { color:#d6b97a; font-size:21px; letter-spacing:.05em;
+      text-shadow:0 -1px 1px rgba(0,0,0,.85), 0 1px 0 rgba(200,173,114,.20);
+    }
+
+    /* 23 — Marbled Disc (polished stone) */
+    .m-marble { width:72px; height:72px; border-radius:50%;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,.55), transparent 35%),
+        radial-gradient(circle at 70% 65%, rgba(155,123,68,.20), transparent 45%),
+        linear-gradient(145deg, #f5ecdb 0%, #d8c8ad 50%, #a08a68 100%);
+      box-shadow:
+        0 22px 44px rgba(33,27,23,.26),
+        inset 0 2px 4px rgba(255,255,255,.75),
+        inset 0 -3px 6px rgba(122,93,50,.30);
+    }
+    .m-marble::before { inset:7px; border-radius:50%; border:1px solid rgba(155,123,68,.35);
+      background:
+        radial-gradient(circle at 40% 30%, rgba(255,255,255,.40), transparent 50%),
+        linear-gradient(145deg, rgba(255,255,255,.10), rgba(122,93,50,.10));
+      box-shadow:inset 0 -1px 2px rgba(122,93,50,.20);
+    }
+    .m-marble .letters { font-size:20px; letter-spacing:.07em; color:#5a4524;
+      text-shadow:0 1px 0 rgba(255,255,255,.85), 0 -1px 1px rgba(0,0,0,.22);
+    }
+
+    .dark-band { max-width:1180px; margin:24px auto 0; border-radius:32px; padding:24px; background:linear-gradient(145deg,#30241f,#15110f); display:flex; gap:22px; flex-wrap:wrap; align-items:center; justify-content:center; color:var(--ivory); }
+    .dark-band .m-bracket .letters { background:#211915; }
+
+    @media (max-width: 780px) { header { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <div class="eyebrow">Premium CSS Monogram Library</div>
+      <h1>Better marks, less logo gimmick.</h1>
+      <p>Dribbble direction: strong negative space, presentation-quality cards, simpler silhouettes, refined spacing, and fewer “look what CSS can do” tricks. These are original CSS marks aimed at boutique local sites.</p>
+    </div>
+    <aside class="brief">
+      <p><strong>Filter:</strong> usable at 48–72px, no diagonal anti-sign, no toy shapes, no trademark copies, no novelty animation. Prioritize seals, editorial brackets, ligatures, crests, and soft premium geometry.</p>
+    </aside>
+  </header>
+
+  <main class="grid">
+    <section class="card"><div class="stage"><span class="mark m-seal"><span class="letters"><span>L</span><span class="amp">&amp;</span><span>L</span></span></span></div><div><h2>Fine Seal</h2><small>Still the strongest default. Clean, balanced, upscale.</small></div></section>
+    <section class="card rose"><div class="stage"><span class="mark m-oval"><span class="letters">L&amp;L</span></span></div><div><h2>Atelier Oval</h2><small>More boutique label than app icon. Great for salons.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-bracket"><i></i><span class="letters">LL</span></span></div><div><h2>Editorial Bracket</h2><small>Magazine masthead feel. Simple and very legible.</small></div></section>
+    <section class="card sage"><div class="stage"><span class="mark m-medallion"><span class="letters">LL</span></span></div><div><h2>Beveled Medallion</h2><small>Dimensional gold coin with inset bevel — premium boutique presence.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-pearl"><span class="letters">LL</span></span></div><div><h2>Onyx Cabochon</h2><small>Raised pearl shell over inset onyx — couture jewelry feel.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-tile"><span class="letters">LL</span></span></div><div><h2>Ivory Tile</h2><small>Good for navs that need a more solid app-like mark.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-emboss"><span class="letters">LL</span></span></div><div><h2>Embossed Seal</h2><small>Debossed letters on paper-toned card stock. Stationery couture.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-stack"><span class="letters"></span></span></div><div><h2>Stacked Ligature</h2><small>Letter-built mark; better than plain text in a circle.</small></div></section>
+    <section class="card rose"><div class="stage"><span class="mark m-diamond"><span class="letters">LL</span></span></div><div><h2>Monoline Diamond</h2><small>Jewel/atelier feel. Works well in footers and favicons.</small></div></section>
+    <section class="card dark"><div class="stage"><span class="mark m-coin"><span class="letters">LL</span></span></div><div><h2>Wax Coin</h2><small>Richer, darker, strong on ivory hero/nav states.</small></div></section>
+    <section class="card sage"><div class="stage"><span class="mark m-stamp"><span class="letters">LL</span></span></div><div><h2>Layered Wax Stamp</h2><small>Stacked rings with dimensional shadow — strong on nav and packaging.</small></div></section>
+    <section class="card rose"><div class="stage"><span class="mark m-cameo"><span class="letters">L&amp;L</span></span></div><div><h2>Raised Cameo</h2><small>Onyx oval inlaid in champagne — second-skin luxury label.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-relief"><span class="letters">LL</span></span></div><div><h2>Relief Plaque</h2><small>Raised metallic tile with debossed core. Strong favicon weight.</small></div></section>
+    <section class="card dark"><div class="stage"><span class="mark m-foil"><span class="letters">LL</span></span></div><div><h2>Champagne Foil</h2><small>Square foil stamp with debossed core — packaging-grade gravitas.</small></div></section>
+    <section class="card rose"><div class="stage"><span class="mark m-lacquer"><span class="letters">LL</span></span></div><div><h2>Lacquer Dome</h2><small>Glossy enamel sphere with sculpted highlight — nail-bar signature.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-enamel"><span class="letters">LL</span></span></div><div><h2>Enamel Pin</h2><small>Champagne rim around blush enamel — boutique pin energy.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-press"><span class="letters">L&amp;L</span></span></div><div><h2>Letterpress Plate</h2><small>Soft debossed cardstock plaque — stationery atelier mark.</small></div></section>
+    <section class="card sage"><div class="stage"><span class="mark m-ring"><span class="letters">LL</span></span></div><div><h2>Champagne Ring</h2><small>Heavy raised metal collar around a polished disc — signet weight.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-glass"><span class="letters">LL</span></span></div><div><h2>Glass Cabochon</h2><small>Clear lens dome over warm champagne — patisserie glaze.</small></div></section>
+    <section class="card dark"><div class="stage"><span class="mark m-tablet"><span class="letters">LL</span></span></div><div><h2>Onyx Tablet</h2><small>Polished stone slab with inset core — apothecary-luxe identity.</small></div></section>
+    <section class="card"><div class="stage"><span class="mark m-marble"><span class="letters">LL</span></span></div><div><h2>Marbled Disc</h2><small>Veined cream marble with hand-rubbed sheen — spa front-of-house.</small></div></section>
+  </main>
+
+  <section class="dark-band" aria-label="Dark background tests">
+    <span class="mark m-seal"><span class="letters"><span>L</span><span class="amp">&amp;</span><span>L</span></span></span>
+    <span class="mark m-oval"><span class="letters">L&amp;L</span></span>
+    <span class="mark m-bracket"><i></i><span class="letters">LL</span></span>
+    <span class="mark m-medallion"><span class="letters">LL</span></span>
+    <span class="mark m-pearl"><span class="letters">LL</span></span>
+    <span class="mark m-tile"><span class="letters">LL</span></span>
+    <span class="mark m-emboss"><span class="letters">LL</span></span>
+    <span class="mark m-stack"><span class="letters"></span></span>
+    <span class="mark m-diamond"><span class="letters">LL</span></span>
+    <span class="mark m-coin"><span class="letters">LL</span></span>
+    <span class="mark m-stamp"><span class="letters">LL</span></span>
+    <span class="mark m-cameo"><span class="letters">L&amp;L</span></span>
+    <span class="mark m-relief"><span class="letters">LL</span></span>
+    <span class="mark m-foil"><span class="letters">LL</span></span>
+    <span class="mark m-lacquer"><span class="letters">LL</span></span>
+    <span class="mark m-enamel"><span class="letters">LL</span></span>
+    <span class="mark m-press"><span class="letters">L&amp;L</span></span>
+    <span class="mark m-ring"><span class="letters">LL</span></span>
+    <span class="mark m-glass"><span class="letters">LL</span></span>
+    <span class="mark m-tablet"><span class="letters">LL</span></span>
+    <span class="mark m-marble"><span class="letters">LL</span></span>
+  </section>
+</body>
+</html>
