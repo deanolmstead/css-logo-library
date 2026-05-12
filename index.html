@@ -370,65 +370,6 @@
       text-shadow:0 -1px 1px rgba(0,0,0,.85), 0 1px 0 rgba(200,173,114,.20);
     }
 
-    /* 23 — Marbled Disc (polished stone) */
-    .m-marble { width:72px; height:72px; border-radius:50%;
-      background:
-        radial-gradient(circle at 30% 25%, rgba(255,255,255,.55), transparent 35%),
-        radial-gradient(circle at 70% 65%, rgba(155,123,68,.20), transparent 45%),
-        linear-gradient(145deg, #f5ecdb 0%, #d8c8ad 50%, #a08a68 100%);
-      box-shadow:
-        0 22px 44px rgba(33,27,23,.26),
-        inset 0 2px 4px rgba(255,255,255,.75),
-        inset 0 -3px 6px rgba(122,93,50,.30);
-    }
-    .m-marble::before { inset:7px; border-radius:50%; border:1px solid rgba(155,123,68,.35);
-      background:
-        radial-gradient(circle at 40% 30%, rgba(255,255,255,.40), transparent 50%),
-        linear-gradient(145deg, rgba(255,255,255,.10), rgba(122,93,50,.10));
-      box-shadow:inset 0 -1px 2px rgba(122,93,50,.20);
-    }
-    .m-marble .letters { font-size:20px; letter-spacing:.07em; color:#5a4524;
-      text-shadow:0 1px 0 rgba(255,255,255,.85), 0 -1px 1px rgba(0,0,0,.22);
-    }
-
-    .dark-band { max-width:1180px; margin:24px auto 0; border-radius:32px; padding:24px; background:linear-gradient(145deg,#30241f,#15110f); display:flex; gap:22px; flex-wrap:wrap; align-items:center; justify-content:center; color:var(--ivory); }
-    .dark-band .m-bracket .letters { background:#211915; }
-
-    @media (max-width: 780px) { header { grid-template-columns:1fr; } }
-
-    /* Global highlight cleanup: no small pill/specular glints */
-    .m-pearl::after,
-    .m-glass::after,
-    .m-lacquer::before,
-    .m-lacquer::after {
-      display: none !important;
-      content: none !important;
-      background: none !important;
-      box-shadow: none !important;
-    }
-    .m-glass::before {
-      background: radial-gradient(circle at 44% 30%, rgba(255,255,255,.18), rgba(255,247,219,.10) 38%, transparent 72%) !important;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), inset 0 8px 18px rgba(255,255,255,.10), inset 0 -10px 22px rgba(0,0,0,.18) !important;
-    }
-    .m-lacquer {
-      box-shadow: 0 26px 50px rgba(33,27,23,.36), inset 0 8px 18px rgba(255,255,255,.16), inset 0 -12px 22px rgba(0,0,0,.36) !important;
-    }
-    .m-enamel::before {
-      background-position: center center !important;
-      box-shadow: inset 0 1px 2px rgba(255,255,255,.16), inset 0 -3px 6px rgba(0,0,0,.34) !important;
-    }
-    body.color-study .m-glass::before {
-      background: radial-gradient(circle at 48% 34%, rgba(255,255,255,.18), rgba(159,200,220,.20) 44%, rgba(217,130,50,.12) 78%, transparent 100%) !important;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), inset 0 8px 18px rgba(159,200,220,.10), inset 0 -12px 22px rgba(18,54,90,.22) !important;
-    }
-    body.color-study .m-enamel {
-      background: radial-gradient(circle at 50% 50%, #d9edf5 0%, #9fc8dc 38%, #12365a 70%, #d98232 100%) !important;
-    }
-    body.color-study .m-enamel::before {
-      background: radial-gradient(circle at 50% 52%, #d9edf5 0%, #9fc8dc 44%, #f29a45 100%) !important;
-      border: 1px solid rgba(18,54,90,.26) !important;
-    }
-
   </style>
 </head>
 <body>
@@ -464,7 +405,6 @@
     <section class="card sage"><div class="stage"><span class="mark m-ring"><span class="letters">LL</span></span></div><div><h2>Champagne Ring</h2><small>Heavy raised metal collar around a polished disc — signet weight.</small></div></section>
     <section class="card"><div class="stage"><span class="mark m-glass"><span class="letters">LL</span></span></div><div><h2>Glass Cabochon</h2><small>Glass-like dome with smooth depth — patisserie glaze.</small></div></section>
     <section class="card dark"><div class="stage"><span class="mark m-tablet"><span class="letters">LL</span></span></div><div><h2>Onyx Tablet</h2><small>Polished stone slab with inset core — apothecary-luxe identity.</small></div></section>
-    <section class="card"><div class="stage"><span class="mark m-marble"><span class="letters">LL</span></span></div><div><h2>Marbled Disc</h2><small>Veined cream marble with hand-rubbed sheen — spa front-of-house.</small></div></section>
   </main>
 
   <section class="dark-band" aria-label="Dark background tests">
@@ -488,7 +428,6 @@
     <span class="mark m-ring"><span class="letters">LL</span></span>
     <span class="mark m-glass"><span class="letters">LL</span></span>
     <span class="mark m-tablet"><span class="letters">LL</span></span>
-    <span class="mark m-marble"><span class="letters">LL</span></span>
   </section>
 </body>
 </html>
